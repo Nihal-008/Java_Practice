@@ -1,11 +1,15 @@
+import java.util.Random;
 import java.util.Scanner;
 
 class GuessNum {
     public static void main(String args[]){
-        int num=75;int attempt=0;int max_tries=5;
+        Random random=new Random();
+        int num =random.nextInt(100);
+        System.out.println(num);
+        int attempt=1;int max_tries=5;
 Scanner sc = new Scanner(System.in);
-while(attempt<max_tries){
-System.out.println("attempt no "+attempt+"Enter the number in 1 to 100 to guess");
+while(attempt<=max_tries){
+System.out.println("attempt no "+attempt+" Enter the number in 1 to 100 to guess");
 
 int gnum=sc.nextInt();
 
@@ -19,10 +23,16 @@ else if(gnum==num){
 System.out.println("Suceess,you guessed the number correctly ");
 
 break;
+
+}
+ else {
+    
+    System.out.println("Invalid input. Enter a number between 1 and 100.");
 }
 attempt++;
 }
 if(attempt ==max_tries)
 System.out.println("better luck next time");
+sc.close();
     }
 }
