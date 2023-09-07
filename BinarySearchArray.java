@@ -21,8 +21,9 @@ import java.util.Scanner;
        }else{
         System.out.println("Element"+numFind+"not found");
        }
-
+       sc.close();
     }
+   
     public static int linearSearch(int[] numArray,int numFind){
         for(int i=0;i<numArray.length;i++)
         {
@@ -34,4 +35,5 @@ import java.util.Scanner;
     return -1;
     
 }
+
  }
